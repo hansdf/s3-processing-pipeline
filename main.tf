@@ -25,3 +25,10 @@ resource "aws_iam_role" "lambda_exec_role" {
     }]
   })
 }
+
+# MISSING:
+# IAM policy for lambda
+# attach policy to role
+# resource for lamba func
+# s3 Trigger that calls the lambda func
+# permission for s3?
