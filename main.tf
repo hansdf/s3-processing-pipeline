@@ -26,9 +26,18 @@ resource "aws_iam_role" "lambda_exec_role" {
   })
 }
 
+# lambda func itself
+resource "aws_lambda_function" "processing_function" {
+  function_name    = "serverless-file-processor"
+  role             = aws_iam_role.lambda_exec_role.arn
+  handler          = "process_file.lambda_handler"
+  runtime          = "python3.9"
+  filename         = "deployment_package.zip"
+  source_code_hash = filebase64sha256("deployment_package.zip")
+}
+
 # MISSING:
 # IAM policy for lambda
 # attach policy to role
-# resource for lamba func
 # s3 Trigger that calls the lambda func
 # permission for s3?
