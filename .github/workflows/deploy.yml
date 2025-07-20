@@ -21,7 +21,7 @@ jobs:
 
       - name: Install dependencies and create ZIP file
         run: |
-          pip install boto3 Pillow
+          pip install Pillow -t ./src
           cd src
           zip -r ../deployment_package.zip .
 
