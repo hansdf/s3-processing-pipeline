@@ -1,5 +1,3 @@
-> **Note:** This project is a work in progress and is not yet complete.
-
 # My Serverless AWS Processing Pipeline
 
 This is a personal project built to practice and showcase my skills in cloud computing, automation, and DevOps. My goal was to create a fully automated, event-driven pipeline on AWS using modern infrastructure-as-code and CI/CD practices.
